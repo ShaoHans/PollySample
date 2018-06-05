@@ -36,7 +36,20 @@ namespace PollyTest1
             Console.WriteLine("=========================================");
             Retry_重试.WaitAndRetryForever();
             */
+
+            /*
             CircuitBreaker_熔断器.AutoCircuit();
+            */
+
+            /*
+            Fallback_回退.Test();
+            Fallback_回退.Test2();
+            */
+
+            //Timeout_超时.Timeout_Fallback();
+            Console.WriteLine("=========================================");
+            Timeout_超时.Timeout_Retry();
+
             Console.ReadKey();
         }
     }
