@@ -36,7 +36,7 @@ namespace PollyTest1
             Console.WriteLine("=========================================");
             Retry_重试.WaitAndRetryForever();
             */
-            CircuitBreaker_熔断器.Test();
+            CircuitBreaker_熔断器.AutoCircuit();
             Console.ReadKey();
         }
     }

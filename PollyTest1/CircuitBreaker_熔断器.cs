@@ -9,7 +9,10 @@ namespace PollyTest1
 {
     public static class CircuitBreaker_熔断器
     {
-        public static void Test()
+        /// <summary>
+        /// 自动熔断
+        /// </summary>
+        public static void AutoCircuit()
         {
             Action<Exception, CircuitState, TimeSpan, Context> onBreak = (ex, state, ts, context) =>
             {
