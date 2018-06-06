@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27705.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PollyTest1", "PollyTest1\PollyTest1.csproj", "{4D5210B0-E273-40CB-8670-E74A172671DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PollyTest1", "PollyTest1\PollyTest1.csproj", "{4D5210B0-E273-40CB-8670-E74A172671DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspectCoreWithPolly", "AspectCoreWithPolly\AspectCoreWithPolly.csproj", "{BBA7760B-C736-4010-8D2C-9740B4E2776A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{4D5210B0-E273-40CB-8670-E74A172671DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D5210B0-E273-40CB-8670-E74A172671DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D5210B0-E273-40CB-8670-E74A172671DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBA7760B-C736-4010-8D2C-9740B4E2776A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBA7760B-C736-4010-8D2C-9740B4E2776A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBA7760B-C736-4010-8D2C-9740B4E2776A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBA7760B-C736-4010-8D2C-9740B4E2776A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,3 +8,4 @@
 *.suo
 /.vs/SSO/v15/Server/sqlite3
 /.vs/PollySample/v15/Server/sqlite3
+/.vs/PollySample/DesignTimeBuild
