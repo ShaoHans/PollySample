@@ -47,8 +47,10 @@ namespace PollyTest1
             */
 
             //Timeout_超时.Timeout_Fallback();
-            Console.WriteLine("=========================================");
-            Timeout_超时.Timeout_Retry();
+            //Console.WriteLine("=========================================");
+            //Timeout_超时.Timeout_Retry();
+
+            Bulkhead_舱壁隔离.Test();
 
             Console.ReadKey();
         }
