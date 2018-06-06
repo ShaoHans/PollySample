@@ -5,7 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AspectCore.Core" Version="0.5.0" />
+    <PackageReference Include="AspectCore.Extensions.DependencyInjection" Version="0.5.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Polly" Version="6.0.1" />
   </ItemGroup>
 
 </Project>

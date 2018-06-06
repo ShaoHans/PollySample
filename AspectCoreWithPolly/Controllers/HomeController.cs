@@ -5,13 +5,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AspectCoreWithPolly.Models;
+using AspectCore.DynamicProxy;
+using AspectCoreWithPolly.Services;
 
 namespace AspectCoreWithPolly.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly UserService _userService;
+
+        public HomeController(UserService userService)
         {
+            _userService = userService;
+        }
+
+        public IActionResult Index()
+        {            
             return View();
         }
 
@@ -22,10 +31,11 @@ namespace AspectCoreWithPolly.Controllers
             return View();
         }
 
-        public IActionResult Contact()
+        public async Task<IActionResult> Contact()
         {
             ViewData["Message"] = "Your contact page.";
 
+            ViewBag.Result = await _userService.GetGoogleIndexHtmlAsync();
             return View();
         }
 
