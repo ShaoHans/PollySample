@@ -12,12 +12,9 @@ namespace AspectCoreWithPolly.Services
         [HystrixCommand(nameof(GetGoogleIndexHtmlFallBackAsync))]
         public virtual async Task<string> GetGoogleIndexHtmlAsync()
         {
-            //HttpClient httpClient = new HttpClient();
-            //string result = await httpClient.GetStringAsync("https://www.google.com");
-            //return result;
-            int i = 1, j = 0;
-            int k = i / j;
-            return k.ToString();
+            HttpClient httpClient = new HttpClient();
+            string result = await httpClient.GetStringAsync("https://www.google.com");
+            return result;
         }
 
         public async Task<string> GetGoogleIndexHtmlFallBackAsync()

@@ -16,18 +16,18 @@ namespace AspectCoreWithPolly.Attributes
             FallBackMethodName = fallBackMethodName;
         }
 
-        public override Task Invoke(AspectContext context, AspectDelegate next)
+        public async override Task Invoke(AspectContext context, AspectDelegate next)
         {
             try
             {
-                return context.Invoke(next);
+                await context.Invoke(next);
             }
             catch (Exception ex)
             {
                 var fallBackMethod = context.ServiceMethod.DeclaringType.GetMethod(FallBackMethodName);
                 object fallBackResult = fallBackMethod.Invoke(context.Implementation, context.Parameters);
                 context.ReturnValue = fallBackResult;
-                return Task.FromResult(0);
+                await Task.FromResult(0);
             }
         }
     }
