@@ -7,14 +7,14 @@ using Polly.Fallback;
 
 namespace PollyTest1
 {
-    public static class Fallback_回退
+    public static class Fallback_降级
     {
         public static void Test()
         {
             try
             {
                 string result = Policy<string>.Handle<ArgumentNullException>()
-                        .Fallback<string>("匿名")
+                        .Fallback<string>("降级后的值：匿名")
                         .Execute(() =>
                         {
                             return GetUserName(null);
