@@ -11,17 +11,17 @@ namespace AspectCoreWithPolly.Attributes
     public class HystrixCommandAttribute : AbstractInterceptorAttribute
     {
         public string FallBackMethodName { get; private set; }
-
+        public Guid TestId { get; set; }
         public HystrixCommandAttribute(string fallBackMethodName)
         {
             FallBackMethodName = fallBackMethodName;
+            TestId = Guid.NewGuid();
         }
 
         public async override Task Invoke(AspectContext context, AspectDelegate next)
         {
             try
             {
-                
                 await context.Invoke(next);
             }
             catch (Exception ex)
